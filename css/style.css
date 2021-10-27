@@ -1,0 +1,221 @@
+/* Resetting to Zero */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	background-color: #fff;
+	font-size: 14px;
+	/* color: #252b42; */
+	font-weight: 400;
+	font-family: Roboto;
+}
+/* END Zero */
+
+/* Default */
+.wrapper {
+	/* Чтобы избавиться от горизотального отступа */
+	min-height: 100%;
+	overflow: hidden;
+	/* Разворачиваем все блоки в колонну */
+	display: flex;
+	flex-direction: column;
+}
+._container {
+	max-width: 1169px;
+	margin: 0px auto;
+	/* Отступы безопасности от карёв, бокс сайзинг нужен, чтобы паддинг учитывался в размер ширины */
+	padding: 0px 15px;
+	box-sizing: content-box;
+}
+._ibg {
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+/* END Default */
+
+/* Header */
+.header {
+	max-height: 128px;
+	padding: 50px 0px 0px 0px;
+	margin: 0px 0px 25px 0px;
+}
+.header__container {
+	/* position: relative; */
+}
+.header__container > *:not(:last-child) {
+	margin: 0px 0px 25px 0px;
+}
+.header__logo {
+	/* position: absolute; */
+	width: 137px;
+	height: 30px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	/* top: 0;
+	left: 0; */
+}
+.header__link {
+}
+.link {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+.link > *:not(:last-child) {
+	margin: 0px 7px 0px 0px;
+}
+.link__arrow {
+	width: 45px;
+	height: 5px;
+}
+.link__text {
+	font-size: 20px;
+	line-height: 23px;
+	color: #3f2aff;
+}
+/* END Header */
+
+/* Main */
+.page {
+}
+.page__main-block {
+}
+.main-block__container {
+}
+.main-block__title {
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 70px;
+	color: #3f2aff;
+	width: 100%;
+	margin: 0px 0px 50px 0px;
+}
+.main-block__body {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -15px;
+	margin: 0px 0px 25px 0px;
+}
+.main-block__column {
+	flex: 0 1 50%;
+	padding: 15px;
+}
+@media (max-width: 800px){
+	.main-block__column {
+		flex: 0 1 100%;
+	}
+}
+.main-block__item {
+}
+.item {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: rgba(255, 255, 255, 1);
+	filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.1));
+}
+.item__image {
+	display: block;
+	padding: 0px 0px 32% 0px;
+	/* width: 572px;
+	height: 180px; */
+	/* margin: 0px 0px 25px 0px; */
+}
+.item__part {
+	position: relative;
+	padding: 25px;
+	height: 325px;
+	/* display: flex;
+	flex-direction: column; */
+}
+.item__title {
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 47px;
+	color: #3f2aff;
+}
+.item__list {
+}
+.list {
+	/* min-height: 80%;
+	flex: 1 1 auto; */
+}
+.list__text {
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 165%;
+	color: #333333;
+}
+.item__page-number {
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	/* padding: 50px 0px 0px 0px; */
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 47px;
+	color: #eaeaea;
+	text-align: right;
+	/* position: absolute; */
+}
+.main-block__button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 0px 25px 0px;
+}
+.main-block__button button{
+	border: #3f2aff 2px solid;
+	background-color: #fff;
+	border-radius: 2px;
+	display: flex;
+	flex: 1 1 100%;
+	min-height: 48px;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 0.2px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 150%;
+	padding: 5px 36px;
+	margin: 10px 0;
+	max-width: 274px;
+	transition: all 0.3s ease 0s;
+}
+/* END Main */
